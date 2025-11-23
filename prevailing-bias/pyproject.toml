@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "prevailing-bias"
+version = "0.1.0"
+description = "Prevailing bias modeling with price and sentiment features"
+authors = [{name = "Quant Developer", email = "quant@example.com"}]
+requires-python = ">=3.10"
+dependencies = [
+    "pandas>=1.5",
+    "numpy>=1.23",
+    "requests>=2.31",
+    "transformers>=4.37",
+    "torch",
+    "yfinance>=0.2",
+    "streamlit>=1.29",
+    "plotly>=5.18",
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
